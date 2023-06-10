@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/game_type'>
+<p>Use this form to initialise the NSSS process:</p>
+<table>
+<tr><td>Enter Number of Players</td><td><input name='numberofpeeps' type='TEXT' width='60'></td></tr>
+</table>
+<BR>
+<input type="radio" name="game_type"
+value="nsss" checked> NSSS
+<BR>
+<input type="radio" name="game_type"
+value="email"> Secret Santa - e-mail
+<BR> 
+<input type="radio" name="game_type"
+value=""> Secret Santa - Spreadsheet
+<BR>
+<p>When you're ready, click this button:</p>
+<p><input value='Enter Names' type='SUBMIT'></p>
+</form>
+
+{% endblock %}

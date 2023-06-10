@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<p>NSSS Pairings:</p>
+<table>
+<tr><th>Chairpeep</th><th>Giftee</th></tr>
+{% for result in results %}
+<tr><td>{{ result.0 }}</td><td>{{ result.1 }}</td></tr>
+{% endfor %}
+</table>
+
+{% endblock %}

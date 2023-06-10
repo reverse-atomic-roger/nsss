@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/eshuffle'>
+<p>Use this form to submit SS participants, with e-mail addresses:</p>
+<table>
+	<tr><th>No.</th><th>Name</th><th>e-mail</th></tr>
+{% for participant in partlist %}
+	<tr><td>{{ participant.number }}</td>
+	<td><input name={{ participant.number }} type='TEXT' width='60'></td>
+	<td><input name={{ participant.number }}email type='TEXT' width='60'></td></tr>
+{% endfor %}
+</table>
+<p>When you're ready, click this button:</p>
+<p><input value='Randomogrificate!' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
